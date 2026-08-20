@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>St. Kizito Minor Seminary | Dedza, Malawi</title>
+
+<meta name="description" content="St. Kizito Minor Seminary, Dedza, Malawi — institutional website and digital school platform concept.">
+<meta name="theme-color" content="#071a12">
+
+<style>
+:root{
+    --green:#073b2a;
+    --green2:#0b5d43;
+    --gold:#c9a227;
+    --gold2:#e5c45a;
+    --cream:#f7f4eb;
+    --white:#ffffff;
+    --dark:#101714;
+    --muted:#69736e;
+    --border:#e5e8e5;
+    --shadow:0 18px 50px rgba(0,0,0,.10);
+    --radius:20px;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:var(--cream);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+    cursor:pointer;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:var(--green);
+    color:white;
+    padding:9px 5%;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    font-size:13px;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+    max-width:1250px;
+    margin:auto;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--green);
+    color:var(--gold2);
+    display:grid;
+    place-items:center;
+    font-weight:900;
+    border:2px solid var(--gold);
+}
+
+.brand-text strong{
+    display:block;
+    color:var(--green);
+    font-size:16px;
+}
+
+.brand-text span{
+    display:block;
+    font-size:11px;
+    letter-spacing:1.5px;
+    color:var(--muted);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover{
+    color:var(--green2);
+}
+
+.portal-btn{
+    background:var(--gold);
+    color:#16120a;
+    padding:11px 17px;
+    border-radius:10px;
+    border:0;
+    font-weight:800;
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:none;
+    font-size:27px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:690px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+        linear-gradient(90deg,rgba(3,25,17,.94),rgba(3,25,17,.68),rgba(3,25,17,.28)),
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.hero-content{
+    width:min(1250px,90%);
+    margin:auto;
+    color:white;
+}
+
+.eyebrow{
+    color:var(--gold2);
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    max-width:800px;
+    font-family:Georgia,serif;
+    font-size:clamp(45px,7vw,86px);
+    line-height:1.02;
+    margin-bottom:25px;
+}
+
+.hero p{
+    max-width:650px;
+    font-size:19px;
+    color:#edf2ee;
+    margin-bottom:32px;
+}
+
+.actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+}
+
+.btn{
+    padding:14px 21px;
+    border-radius:10px;
+    border:1px solid transparent;
+    font-weight:800;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:var(--gold);
+    color:#17130a;
+}
+
+.btn-outline{
+    border-color:rgba(255,255,255,.5);
+    color:white;
+    background:rgba(255,255,255,.08);
+}
+
+/* STATS */
+
+.stats{
+    background:white;
+    box-shadow:var(--shadow);
+    margin:-55px auto 70px;
+    position:relative;
+    z-index:3;
+    width:min(1150px,90%);
+    border-radius:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.stat{
+    padding:28px;
+    text-align:center;
+    border-right:1px solid var(--border);
+}
+
+.stat:last-child{
+    border:0;
+}
+
+.stat strong{
+    display:block;
+    color:var(--green);
+    font-size:28px;
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:13px;
+}
+
+/* GENERAL */
+
+section{
+    padding:90px 5%;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-head{
+    max-width:720px;
+    margin-bottom:45px;
+}
+
+.section-head .eyebrow{
+    color:var(--green2);
+    margin-bottom:8px;
+}
+
+.section-head h2{
+    font-family:Georgia,serif;
+    color:var(--green);
+    font-size:clamp(34px,5vw,54px);
+    line-height:1.1;
+    margin-bottom:15px;
+}
+
+.section-head p{
+    color:var(--muted);
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.04);
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.icon{
+    width:50px;
+    height:50px;
+    display:grid;
+    place-items:center;
+    background:#eef5f1;
+    color:var(--green);
+    border-radius:14px;
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:var(--green);
+    margin-bottom:10px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+}
+
+.about-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:480px;
+    border-radius:25px;
+    background:
+        linear-gradient(180deg,transparent,rgba(0,0,0,.45)),
+        url("https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.check-list{
+    list-style:none;
+    margin-top:25px;
+}
+
+.check-list li{
+    margin:13px 0;
+    font-weight:600;
+}
+
+.check-list li::before{
+    content:"✓";
+    color:var(--gold);
+    font-weight:900;
+    margin-right:10px;
+}
+
+/* FORMATION */
+
+.formation{
+    background:var(--green);
+    color:white;
+}
+
+.formation .section-head h2,
+.formation .section-head p{
+    color:white;
+}
+
+.formation .section-head .eyebrow{
+    color:var(--gold2);
+}
+
+.formation .card{
+    background:#0b4935;
+    border-color:rgba(255,255,255,.1);
+}
+
+.formation .card h3{
+    color:var(--gold2);
+}
+
+.formation .card p{
+    color:#d6e2dc;
+}
+
+/* PORTAL */
+
+.portal{
+    background:#eef3ef;
+}
+
+.portal-box{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:var(--shadow);
+}
+
+.portal-tabs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.portal-tabs button{
+    border:1px solid var(--border);
+    background:white;
+    padding:11px 15px;
+    border-radius:9px;
+    font-weight:700;
+}
+
+.portal-tabs button.active{
+    background:var(--green);
+    color:white;
+}
+
+.portal-panel{
+    display:none;
+}
+
+.portal-panel.active{
+    display:block;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.metric{
+    background:#f6f8f6;
+    padding:22px;
+    border-radius:14px;
+}
+
+.metric span{
+    display:block;
+    color:var(--muted);
+    font-size:12px;
+}
+
+.metric strong{
+    font-size:25px;
+    color:var(--green);
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:15px;
+    border-bottom:1px solid var(--border);
+    text-align:left;
+}
+
+th{
+    color:var(--green);
+    background:#f5f7f5;
+}
+
+/* EVENTS */
+
+.event{
+    display:flex;
+    gap:18px;
+    padding:20px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.date-box{
+    min-width:65px;
+    height:65px;
+    border-radius:12px;
+    background:var(--green);
+    color:white;
+    display:grid;
+    place-items:center;
+    text-align:center;
+}
+
+.date-box strong{
+    display:block;
+    font-size:20px;
+}
+
+/* ADMISSIONS */
+
+.admissions{
+    background:white;
+}
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    position:relative;
+    padding:25px;
+    border:1px solid var(--border);
+    border-radius:18px;
+}
+
+.step-number{
+    font-size:35px;
+    font-weight:900;
+    color:var(--gold);
+}
+
+/* CONTACT */
+
+.contact{
+    background:var(--green);
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact h2{
+    font-family:Georgia,serif;
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.contact p{
+    color:#d8e4de;
+}
+
+.contact-card{
+    background:white;
+    color:var(--dark);
+    border-radius:20px;
+    padding:30px;
+}
+
+.contact-row{
+    padding:15px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.contact-row strong{
+    display:block;
+    color:var(--green);
+}
+
+/* FOOTER */
+
+footer{
+    background:#041b12;
+    color:#bfcac4;
+    padding:55px 5% 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+footer a{
+    display:block;
+    margin:8px 0;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:35px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.1);
+    font-size:13px;
+}
+
+/* MODAL */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    place-items:center;
+    z-index:2000;
+    padding:20px;
+}
+
+.modal.show{
+    display:grid;
+}
+
+.modal-box{
+    background:white;
+    width:min(500px,100%);
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    border:0;
+    background:none;
+    font-size:25px;
+}
+
+.form-group{
+    margin-bottom:16px;
+}
+
+.form-group label{
+    display:block;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:13px;
+    border:1px solid var(--border);
+    border-radius:9px;
+}
+
+.full-btn{
+    width:100%;
+    border:0;
+    background:var(--green);
+    color:white;
+    padding:14px;
+    border-radius:9px;
+    font-weight:800;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        right:0;
+        background:white;
+        padding:20px;
+        flex-direction:column;
+        box-shadow:var(--shadow);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .grid,
+    .about-layout,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-image{
+        min-height:350px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:550px){
+
+    .topbar{
+        flex-direction:column;
+        gap:4px;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .hero h1{
+        font-size:47px;
+    }
+
+    section{
+        padding:65px 5%;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .dashboard,
+    .process{
+        grid-template-columns:1fr;
+    }
+
+    .portal-box{
+        padding:20px;
+    }
+
+    .contact h2{
+        font-size:38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+    <span>📍 Dedza, Malawi</span>
+    <span>Institutional Website Concept • Information subject to school confirmation</span>
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav-inner">
+
+<a href="#home" class="brand">
+    <div class="logo">SK</div>
+    <div class="brand-text">
+        <strong>St. Kizito Minor Seminary</strong>
+        <span>DEDZA · MALAWI</span>
+    </div>
+</a>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+<div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#academics">Academics</a>
+    <a href="#formation">Formation</a>
+    <a href="#activities">Activities</a>
+    <a href="#admissions">Admissions</a>
+    <button class="portal-btn" onclick="openLogin()">Student Portal</button>
+</div>
+
+</div>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+<div class="hero-content">
+
+<div class="eyebrow">ST. KIZITO MINOR SEMINARY · DEDZA</div>
+
+<h1>Forming minds.<br>Shaping vocations.</h1>
+
+<p>
+A modern institutional platform concept designed to connect
+faith, education, formation, leadership and service.
+</p>
+
+<div class="actions">
+    <a href="#about" class="btn btn-primary">Discover the Seminary</a>
+    <button class="btn btn-outline" onclick="openLogin()">Enter Student Portal</button>
+</div>
+
+</div>
+</header>
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stat">
+<strong>Faith</strong>
+<span>Spiritual Formation</span>
+</div>
+
+<div class="stat">
+<strong>Mind</strong>
+<span>Academic Development</span>
+</div>
+
+<div class="stat">
+<strong>Character</strong>
+<span>Leadership & Discipline</span>
+</div>
+
+<div class="stat">
+<strong>Service</strong>
+<span>Community & Mission</span>
+</div>
+
+</div>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container about-layout">
+
+<div class="about-image"></div>
+
+<div>
+
+<div class="section-head">
+<div class="eyebrow">WHO WE ARE</div>
+<h2>A community of learning and formation.</h2>
+
+<p>
+St. Kizito Minor Seminary is presented through this digital
+platform as an institution where education and formation
+work together to prepare young people for their future.
+</p>
+</div>
+
+<ul class="check-list">
+<li>Academic excellence</li>
+<li>Spiritual and human formation</li>
+<li>Leadership development</li>
+<li>Discipline and responsibility</li>
+<li>Service to Church and community</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACADEMICS -->
+
+<section id="academics">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">ACADEMICS</div>
+<h2>Education that prepares for tomorrow.</h2>
+<p>
+The academic section provides a central place for curriculum
+information, learner progress, examination information and
+academic communication.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📚</div>
+<h3>Academic Programmes</h3>
+<p>
+Information about subjects, departments, learning programmes
+and academic expectations can be published here.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>Academic Performance</h3>
+<p>
+A future secure portal can provide students and parents with
+access to academic progress and results.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧠</div>
+<h3>Learning Resources</h3>
+<p>
+Digital learning materials, academic notices and revision
+resources can be organised through the platform.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORMATION -->
+
+<section class="formation" id="formation">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">SEMINARY FORMATION</div>
+<h2>Formation of the whole person.</h2>
+
+<p>
+The platform can give formation its own dedicated institutional
+space rather than treating it as an ordinary school activity.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">✝</div>
+<h3>Spiritual Formation</h3>
+<p>
+Prayer, liturgy, reflection and spiritual development.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧭</div>
+<h3>Human Formation</h3>
+<p>
+Developing maturity, discipline, responsibility and character.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Community Life</h3>
+<p>
+Building brotherhood, service, respect and collaboration.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ACTIVITIES -->
+
+<section id="activities">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">STUDENT LIFE</div>
+<h2>Beyond the classroom.</h2>
+<p>
+A central activities platform can bring together sport,
+clubs, formation activities, events and student achievements.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">⚽</div>
+<h3>Sports</h3>
+<p>Football, athletics and other sporting activities.</p>
+</div>
+
+<div class="card">
+<div class="icon">🎵</div>
+<h3>Music & Culture</h3>
+<p>Music, cultural activities and creative expression.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏆</div>
+<h3>Competitions</h3>
+<p>Academic, sporting and inter-school competitions.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTAL -->
+
+<section class="portal" id="portal">
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">DIGITAL CAMPUS</div>
+<h2>One portal for the school community.</h2>
+<p>
+A future integrated platform can give authorised users access
+to the information relevant to them.
+</p>
+</div>
+
+<div class="portal-box">
+
+<div class="portal-tabs">
+
+<button class="active" onclick="showPanel('dashboard',this)">Dashboard</button>
+<button onclick="showPanel('fees',this)">Fees</button>
+<button onclick="showPanel('results',this)">Results</button>
+<button onclick="showPanel('calendar',this)">Calendar</button>
+<button onclick="showPanel('announcements',this)">Announcements</button>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div class="portal-panel active" id="dashboard">
+
+<div class="dashboard">
+
+<div class="metric">
+<span>Student</span>
+<strong>SL Student</strong>
+</div>
+
+<div class="metric">
+<span>Academic Status</span>
+<strong>Active</strong>
+</div>
+
+<div class="metric">
+<span>Fees Status</span>
+<strong>Demo</strong>
+</div>
+
+<div class="metric">
+<span>Attendance</span>
+<strong>—</strong>
+</div>
+
+</div>
+
+<p>
+This is a demonstration dashboard. Real student information
+would require secure authentication and an authorised school
+database.
+</p>
+
+</div>
+
+<!-- FEES -->
+
+<div class="portal-panel" id="fees">
+
+<h3>Fees & Account</h3>
+
+<br>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Item</th>
+<th>Status</th>
+<th>Amount</th>
+</tr>
+
+<tr>
+<td>Tuition / School Fees</td>
+<td>To be confirmed</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>Boarding / Accommodation</td>
+<td>To be confirmed</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>Other Charges</td>
+<td>To be confirmed</td>
+<td>—</td>
+</tr>
+
+</table>
+
+</div>
+
+<br>
+
+<p>
+Official fees should only be published after confirmation
+and approval by the school administration.
+</p>
+
+</div>
+
+<!-- RESULTS -->
+
+<div class="portal-panel" id="results">
+
+<h3>Academic Results</h3>
+
+<br>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Assessment</th>
+<th>Result</th>
+</tr>
+
+<tr>
+<td>Mathematics</td>
+<td>Demo</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>English</td>
+<td>Demo</td>
+<td>—</td>
+</tr>
+
+<tr>
+<td>Science</td>
+<td>Demo</td>
+<td>—</td>
+</tr>
+
+</table>
+
+</div>
+
+<br>
+
+<p>
+Actual examination results would be accessible only through
+secure authenticated accounts.
+</p>
+
+</div>
+
+<!-- CALENDAR -->
+
+<div class="portal-panel" id="calendar">
+
+<h3>School Calendar</h3>
+
+<div class="event">
+
+<div class="date-box">
+<strong>01</strong>
+<span>SEP</span>
+</div>
+
+<div>
+<strong>Academic Term</strong>
+<p>Official dates to be confirmed by the school.</p>
+</div>
+
+</div>
+
+<div class="event">
+
+<div class="date-box">
+<strong>15</strong>
+<span>SEP</span>
+</div>
+
+<div>
+<strong>Formation Programme</strong>
+<p>Programme information to be published.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- ANNOUNCEMENTS -->
+
+<div class="portal-panel" id="announcements">
+
+<h3>Announcements</h3>
+
+<div class="event">
+
+<div class="date-box">
+<strong>NEW</strong>
+</div>
+
+<div>
+<strong>School Announcement</strong>
+<p>
+Official announcements can be published here by authorised
+administrators.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ADMISSIONS -->
+
+<section class="admissions" id="admissions">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="eyebrow">ADMISSIONS</div>
+
+<h2>Begin the journey.</h2>
+
+<p>
+A digital admissions system can guide prospective families
+through the application process.
+</p>
+
+</div>
+
+<div class="process">
+
+<div class="step">
+<div class="step-number">01</div>
+<h3>Enquire</h3>
+<p>Learn about admission requirements.</p>
+</div>
+
+<div class="step">
+<div class="step-number">02</div>
+<h3>Apply</h3>
+<p>Complete the application process.</p>
+</div>
+
+<div class="step">
+<div class="step-number">03</div>
+<h3>Review</h3>
+<p>Application reviewed by the institution.</p>
+</div>
+
+<div class="step">
+<div class="step-number">04</div>
+<h3>Enrol</h3>
+<p>Successful candidates receive further instructions.</p>
+</div>
+
+</div>
+
+<br><br>
+
+<button class="btn btn-primary" onclick="openAdmission()">
+Start Admission Enquiry
+</button>
+
+</div>
+
+</section>
+
+<!-- NEWS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+<div class="eyebrow">NEWS & EVENTS</div>
+<h2>The life of the institution.</h2>
+<p>
+A future digital newsroom can showcase achievements, events,
+formation activities, competitions and important announcements.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📰</div>
+<h3>School News</h3>
+<p>Official institutional news and announcements.</p>
+</div>
+
+<div class="card">
+<div class="icon">📅</div>
+<h3>Events</h3>
+<p>Upcoming school and formation events.</p>
+</div>
+
+<div class="card">
+<div class="icon">🏅</div>
+<h3>Achievements</h3>
+<p>Celebrating student and institutional achievements.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div>
+
+<div class="eyebrow">CONTACT</div>
+
+<h2>Connect with the Seminary.</h2>
+
+<p>
+Official contact information, admissions contacts,
+location details and communication channels can be published
+here after confirmation by the institution.
+</p>
+
+<br>
+
+<a href="mailto:info@example.com" class="btn btn-primary">
+Email the Seminary
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="contact-row">
+<strong>Institution</strong>
+St. Kizito Minor Seminary
+</div>
+
+<div class="contact-row">
+<strong>Location</strong>
+Dedza, Malawi
+</div>
+
+<div class="contact-row">
+<strong>Telephone</strong>
+To be confirmed by the school
+</div>
+
+<div class="contact-row">
+<strong>Email</strong>
+To be confirmed by the school
+</div>
+
+<div class="contact-row">
+<strong>Website Status</strong>
+Institutional website concept
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>St. Kizito Minor Seminary</h3>
+
+<p>
+Forming young people through education, faith,
+discipline, leadership and service.
+</p>
+
+</div>
+
+<div>
+
+<h3>Explore</h3>
+
+<a href="#about">About</a>
+<a href="#academics">Academics</a>
+<a href="#formation">Formation</a>
+<a href="#activities">Activities</a>
+
+</div>
+
+<div>
+
+<h3>Platform</h3>
+
+<a href="#portal">Student Portal</a>
+<a href="#admissions">Admissions</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 St. Kizito Minor Seminary Website Concept.
+All institutional information is subject to confirmation by the school.
+
+</div>
+
+</footer>
+
+<!-- LOGIN MODAL -->
+
+<div class="modal" id="loginModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal('loginModal')">×</button>
+
+<h2>Student / Parent Portal</h2>
+
+<p style="color:#69736e;margin:10px 0 25px;">
+Demonstration login for the website concept.
+</p>
+
+<div class="form-group">
+
+<label>Student ID / Parent ID</label>
+
+<input id="studentID" placeholder="Enter ID">
+
+</div>
+
+<div class="form-group">
+
+<label>PIN</label>
+
+<input id="studentPIN" type="password" placeholder="Enter PIN">
+
+</div>
+
+<button class="full-btn" onclick="login()">
+Sign In
+</button>
+
+<p style="font-size:12px;margin-top:15px;color:#69736e;">
+Demo credentials: <strong>SK2026001</strong> / <strong>1234</strong>
+</p>
+
+</div>
+
+</div>
+
+<!-- ADMISSION MODAL -->
+
+<div class="modal" id="admissionModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closeModal('admissionModal')">×</button>
+
+<h2>Admission Enquiry</h2>
+
+<p style="color:#69736e;margin:10px 0 25px;">
+Submit your details for demonstration purposes.
+</p>
+
+<div class="form-group">
+<label>Parent / Guardian Name</label>
+<input placeholder="Full name">
+</div>
+
+<div class="form-group">
+<label>Applicant Name</label>
+<input placeholder="Student name">
+</div>
+
+<div class="form-group">
+<label>Phone Number</label>
+<input placeholder="+265">
+</div>
+
+<div class="form-group">
+<label>Programme / Form</label>
+
+<select>
+<option>Select</option>
+<option>Form 1</option>
+<option>Form 2</option>
+<option>Form 3</option>
+<option>Form 4</option>
+</select>
+
+</div>
+
+<button class="full-btn" onclick="submitAdmission()">
+Submit Enquiry
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document.getElementById("navLinks")
+    .classList.toggle("open");
+
+}
+
+/* LOGIN */
+
+function openLogin(){
+
+    document
+    .getElementById("loginModal")
+    .classList.add("show");
+
+}
+
+function login(){
+
+    const id =
+        document.getElementById("studentID").value.trim();
+
+    const pin =
+        document.getElementById("studentPIN").value.trim();
+
+    if(id === "SK2026001" && pin === "1234"){
+
+        closeModal("loginModal");
+
+        document
+        .getElementById("portal")
+        .scrollIntoView({behavior:"smooth"});
+
+        alert(
+            "Welcome to the St. Kizito demonstration portal."
+        );
+
+    }else{
+
+        alert(
+            "Demo login: SK2026001 / 1234"
+        );
+
+    }
+
+}
+
+/* PORTAL TABS */
+
+function showPanel(id,button){
+
+    document
+    .querySelectorAll(".portal-panel")
+    .forEach(panel => panel.classList.remove("active"));
+
+    document
+    .querySelectorAll(".portal-tabs button")
+    .forEach(btn => btn.classList.remove("active"));
+
+    document
+    .getElementById(id)
+    .classList.add("active");
+
+    button.classList.add("active");
+
+}
+
+/* ADMISSION */
+
+function openAdmission(){
+
+    document
+    .getElementById("admissionModal")
+    .classList.add("show");
+
+}
+
+function submitAdmission(){
+
+    alert(
+        "Thank you. This is a demonstration admission form. A production version would securely send the application to the school."
+    );
+
+    closeModal("admissionModal");
+
+}
+
+/* CLOSE */
+
+function closeModal(id){
+
+    document
+    .getElementById(id)
+    .classList.remove("show");
+
+}
+
+/* CLOSE WHEN CLICKING OUTSIDE */
+
+window.addEventListener("click",function(event){
+
+    document
+    .querySelectorAll(".modal")
+    .forEach(modal => {
+
+        if(event.target === modal){
+
+            modal.classList.remove("show");
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
